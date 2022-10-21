@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -57,13 +58,16 @@ public class BaseTest {
 			
 		   // driver = WebDriverManager.firefoxdriver().create();
              driver = new FirefoxDriver(foptions); 
-		driver.manage().window().maximize();
-		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		}
+		 driver.manage().window().maximize();
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		 
+		    driver.manage().window().setSize(new Dimension(1440, 900));
 			driver.get("https://keybooks.ro");
-		// driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+		//driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		}
 		
-	}
+	
 	
 	@AfterClass
 	public void closeBrowser() throws InterruptedException {
