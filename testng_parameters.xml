@@ -3,7 +3,7 @@
     <test name="123" >
     <parameter name = "user" value = "TestUser"/>
     <parameter name = "pass" value = "12345@67890"/>    
-    <parameter name = "browser" value = "firefox"/>
+    <parameter name = "browser" value = "chrome"/>
         <classes>
             <class name="Tests.LoginTest" ></class>
         </classes>
